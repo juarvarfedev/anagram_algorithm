@@ -3,7 +3,7 @@ import "./styles.css";
 document.getElementById("app").innerHTML = `
 <h1>Anagrams</h1>
 <div>
-  This code solve the anagrams comparison given two strings.
+  This code solves the anagrams comparison given two strings.
  </div>
 `;
 
@@ -22,8 +22,6 @@ const areAnagrams = (s1, s2) => {
     if (freq2.hasOwnProperty(s2[i])) freq2[s2[i]] += 1;
     else freq2[s2[i]] = 1;
   }
-  console.log(freq1);
-  console.log(freq2);
   for (let key in freq1) {
     if (!freq2.hasOwnProperty(key) || freq1[key] !== freq2[key]) return false;
   }
